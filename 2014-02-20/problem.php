@@ -29,6 +29,18 @@ function outputAscii()
 	foreach (array_reverse($output) as $o) {
 		echo $o;
 	}
+	echo "\n";
+
+	$output = array();
+	for ($j = 1; $j <= 4; $j++) {
+		$output[] = str_repeat(' ',$j) . str_repeat('#',$j) . str_repeat(' ',(4-$j) * 4) . str_repeat('#',$j) . PHP_EOL;
+	}
+	foreach ($output as $o) {
+		echo $o;
+	}
+	foreach (array_reverse($output) as $o) {
+		echo $o;
+	}
 }
 
 outputAscii();
