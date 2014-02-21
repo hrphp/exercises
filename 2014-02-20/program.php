@@ -19,6 +19,12 @@ foreach ($parts as $part) {
     echo $part . PHP_EOL;
 }
 
-for ($i = 0; $i < 5; $i++) {
-    echo str_repeat(' ', $i) . str_repeat('#', $i + 1) .  str_repeat('%', abs(12 - $i) - 8) . PHP_EOL;
+for ($i = -8; $i < 10; $i += 2) {
+    if (abs($i)) {
+        echo str_repeat(' ', (8 - abs($i))/2)
+           . str_repeat('#', ((8 - abs($i))/2) + 1)
+           . str_repeat(' ', ((abs($i)/2) -1) * 4)
+           . str_repeat('#', ((8 - abs($i))/2) + 1)
+           . PHP_EOL;
+    }
 }
